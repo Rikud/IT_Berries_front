@@ -4,10 +4,11 @@ MAINTAINER Ivan Nemshilov
 
 #install front
 RUN apt-get update
-RUN apt-get install nodejs
+RUN apt-get install nodejs -y
+RUN apt-get install npm -y
 ADD src /
 WORKDIR src
-RUN npm install
+RUN npm install -y
 RUN npm run build
 WORKDIR /
 
