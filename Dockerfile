@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 MAINTAINER Ivan Nemshilov
 
 #install front
-RUN apt-get update
+RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install curl -y
 RUN apt-get install build-essential libssl-dev -y
 RUN curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
