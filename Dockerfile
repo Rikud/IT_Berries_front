@@ -4,6 +4,7 @@ MAINTAINER Ivan Nemshilov
 
 #install front
 RUN apt-get update
+RUN apt-get install curl-y
 RUN apt-get install build-essential libssl-dev -y
 RUN curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
 RUN bash install_nvm.sh
