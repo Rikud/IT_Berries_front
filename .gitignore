@@ -1,5 +1,5 @@
 src/.DS_Store
-src/.idea/
+.idea/
 src/node_modules/
 src/public/dist/
 *.tmpl.js
