@@ -7,10 +7,8 @@ RUN apt-get update
 RUN apt-get install nodejs -y
 RUN apt-get install npm -y
 ADD src /
-WORKDIR src
 RUN npm install -y
 RUN npm run build
-WORKDIR /
 
 # install nginx
 RUN apt-get update
