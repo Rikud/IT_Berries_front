@@ -14,9 +14,11 @@ RUN npm install -y
 RUN npm run build
 
 WORKDIR /
+RUN ls -al
 # install nginx
 RUN apt-get update
 RUN apt-get install -y nginx
+RUN ls -al
 # Remove the default Nginx configuration file
 RUN rm -v /etc/nginx/nginx.conf
 # Copy a configuration file
