@@ -9,11 +9,11 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
 RUN bash nodesource_setup.sh
 RUN apt-get install nodejs -y
 ADD src /IT_Berries_front
-RUN ls -al
 WORKDIR /IT_Berries_front
 RUN npm install -y
 RUN npm run build
 
+WORKDIR /
 # install nginx
 RUN apt-get update
 RUN apt-get install -y nginx
