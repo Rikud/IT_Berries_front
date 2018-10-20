@@ -3,8 +3,8 @@ FROM ubuntu:16.04
 MAINTAINER Ivan Nemshilov
 
 #install front
-RUN sudo apt-get update
-RUN sudo apt-get install nodejs
+RUN apt-get update
+RUN apt-get install nodejs
 ADD src /
 WORKDIR src
 RUN npm install
