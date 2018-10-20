@@ -22,9 +22,9 @@ RUN ls -al
 # Remove the default Nginx configuration file
 RUN rm -v /etc/nginx/nginx.conf
 # Copy a configuration file
-ADD conf/nginx.conf /etc/nginx/
+ADD confs/nginx.conf /etc/nginx/
 # add nginx conf
-ADD config/default.conf /etc/nginx/conf.d/default.conf
+ADD confs/default.conf /etc/nginx/conf.d/default.conf
 # Append "daemon off;" to the beginning of the configuration
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 # Expose ports
