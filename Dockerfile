@@ -11,6 +11,7 @@ RUN apt-get install nodejs -y
 RUN apt-get install build-essential -y
 RUN apt-get install npm -y
 ADD src /
+WORKDIR /src
 RUN npm install -y
 RUN npm run build
 
